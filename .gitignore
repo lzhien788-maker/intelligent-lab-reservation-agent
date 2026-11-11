@@ -1,0 +1,50 @@
+# ===== 环境与密钥 =====
+# 真实配置一律不提交，只提交 backend/.env.example 作为模板
+.env
+.env.*
+!.env.example
+backend/.env
+
+# ===== Python =====
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ===== 数据库 / 向量库（运行时生成，不入库） =====
+# ChromaDB 向量库是运行时生成的，首次启动会自动重建，不需要提交
+backend/data/chroma/
+
+# ===== 上传文件 =====
+# 用户上传的头像/图片属于运行时数据，不提交；
+# 但实验室的示例配图（lab_xxx.jpg）是初始数据，保留下来，README 要靠它们显示图片
+backend/uploads/*
+!backend/uploads/lab_*.jpg
+
+# ===== 前端 =====
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+frontend/.vscode/*
+!frontend/.vscode/extensions.json
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+*.suo
+*.njsproj
+*.sln
+*.sw?
+
+# ===== 日志 / 临时文件 =====
+*.log
+logs/
+tmp_*
+*.tmp
+.DS_Store
+Thumbs.db
