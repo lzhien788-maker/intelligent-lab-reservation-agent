@@ -4,6 +4,28 @@
 
 > 后端采用 FastAPI + LangGraph 构建 AI Agent，前端采用 Vue 3 + Element Plus，数据库使用 MySQL，知识库使用 ChromaDB 向量库。
 
+## 项目截图
+
+登录页 · 左右分屏品牌布局
+
+![登录页](docs/screenshots/01-login.png)
+
+系统首页 · 数据概览、快捷入口与功能卡片
+
+![系统首页](docs/screenshots/02-home.png)
+
+实验室列表 · 8 个开放实验室，含封面、位置与容量
+
+![实验室列表](docs/screenshots/03-labs.png)
+
+AI 智能助手 · 工具调用过程条 + 流式逐字输出
+
+![AI 智能助手](docs/screenshots/04-ai-chat.png)
+
+实验室预约 · 选择实验室与设备、日期时段与备注
+
+![实验室预约](docs/screenshots/05-booking.png)
+
 ## 功能特性
 
 - **用户认证**：注册 / 登录，基于 JWT + bcrypt 密码加密，Token 失效自动跳转登录。
@@ -260,3 +282,6 @@ cd backend
 # AI 对话接口连通性测试（需后端已启动，会真实调用一次大模型）
 .\.venv\Scripts\python.exe tests/test_ai_chat.py
 ```
+## 许可证
+
+本项目基于 [MIT License](LICENSE) 开源，可自由使用、修改与分发（请保留版权声明）。
